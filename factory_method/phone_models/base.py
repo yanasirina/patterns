@@ -4,10 +4,11 @@ class MyPhoneException(Exception):
 
 class MyPhoneBase:
     """Класс с базовой реализацией основных методов"""
-    storage = None
-    camera = None
-    display_size = None
-    apps = ['calculator', 'face time', 'camera']
+    def __init__(self):
+        self.storage = None
+        self.camera = None
+        self.display_size = None
+        self.apps = ['calculator', 'face time', 'camera']
 
     def prepare(self):
         if self.storage and self.camera and self.display_size:
